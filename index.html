@@ -1,39 +1,26 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Empleados SPA | MockAPI</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css"/>
+  <title>Empleados API</title>
 </head>
 <body>
+  <h1>Empleados</h1>
 
-  <main>
-    <header>
-      <h1>Empleados SPA</h1>
-      <p>Proyecto para visualizar empleados desde una API REST (MockAPI) con filtros.</p>
-    </header>
+    <form id="crearEmpleadoForm">
+    <input type="text" id="nombre" placeholder="Nombre" required />
+    <input type="text" id="correo" placeholder="Correo" required />
+    <input type="text" id="avatar" placeholder="Imagen en URL" required />
+    <button type="submit">Crear</button>
+  </form>
 
-    <section class="intro">
-      <h2>📄 ¿Qué es esto?</h2>
-      <p>Una Single Page Application (SPA) construida con HTML, CSS y JavaScript puro. Consume datos de <code>https://684a5b37165d05c5d3586cb0.mockapi.io/empleados</code> y los muestra con cards dinámicas. Se puede buscar por nombre.</p>
-    </section>
-
-    <input type="text" id="busqueda" placeholder="Buscar empleados por nombre..." />
-    <div id="empleados" class="grid"></div>
+  <div id="caja">
+    <div id="empleados"></div>
+  </div>
 
 
-    <template id="empleado-template">
-      <div class="card">
-        <img src="" alt="" />
-        <h2></h2>
-      </div>
-    </template>
-
-    <footer>
-      &copy; 2025 - SPA de empleados.
-    </footer>
-  </main>
 
   <script src="script.js"></script>
 </body>
